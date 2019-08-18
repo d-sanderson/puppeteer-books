@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="index.css">
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(function() {
+        $.getJSON('hackernews.json', function(data) {
+          console.log('success');
+          console.log(data);
+          $.each(data,function(i,t){
+              $('div.container').append(`
+              <div class="box">
+              <a href="${data[i].link}"><h1 class="title">${data[i].title}</h2></a>
+              <caption>Posted: ${data[i].age}</caption>
+              <h3>${data[i].score}</h2>
+
+              </div>
+              `);
+          });
+        }).error(function() {
+          console.log('error');
+        });
+      });
+    </script>
+    <title>Hacker News</title>
+  </head>
+  <body>
+    <h1>Hacker News</h1>
+    <div class="container"></div>
+  </body>
+</html>

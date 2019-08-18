@@ -1,0 +1,43 @@
+body {
+  margin: 40px;
+}
+h1 {
+  text-align: center;
+  font-size: 2rem
+}
+.container{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 10px;
+  margin-left: -30px;
+  background-color: #fff;
+  color: green;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  height: 350px;
+  /* padding: 20px; */
+  /* font-size: 150%; */
+}
+
+.box > a > h1 {
+  text-align: center;
+  color: rgb(12, 224, 12);
+  text-decoration: none;
+
+}
+
+.box > a {
+  text-decoration: none;
+}
+
+.box > a > h1:hover {
+  color: darkmagenta;
+}
+
+.box > caption, .box > h3 {
+  margin: 0 0 0 2%;
+}
